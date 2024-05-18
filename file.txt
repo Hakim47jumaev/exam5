@@ -1,0 +1,440 @@
+## RULES:
+> No interner, no help to each other!
+> Send the exam to github
+> You have 2 hours only
+
+### 1 Question
+Дар бораи рекурсия нависед. 
+rekursiya funksiyae ki khudashro dar dokhili khudash davat mekunad
+farqash az cikl dar on ast ki ciklro 2 mar tob mekhurad yane dar yakum davr to sharti tamomshavi ijro shudan stek
+jam karda dar 2um davr onhoro hisob karda nest mekunad 
+   
+
+
+
+
+
+### 2 Question
+Closure(Замыкания) - ро бо мисолҳо фаҳмонед.
+funksiyae ki dar dokhilash funksiya dorad
+masalan 
+def sfaktorial(a):
+    sum=1
+    def fuctorial(a):
+        res=1
+        for i in range(1,a+1):
+            res*=i
+            sum+=res
+    return factorial(a)
+
+s=sfaktorial(2)
+print(s)
+output -> 2.5 
+
+
+
+
+
+
+
+### 3 Question
+Контейнерҳоро ба хотир оварда онҳоро нависед. 
+kontainerho list,tuple ,dictionary,set
+misol:
+list=[1,3,4,True,"hello"]
+tuple=(1,2,3,False,4,"pol") tagir nameyobad
+dictionary={
+    1:"Kabir",
+    "age":23,
+    "car":"bmw"
+}  indexhoyash nom dorand
+set={1,"hi" ,"world" } set index nadorad
+
+
+
+
+
+
+### 4 Question
+Дар бораи lambda expression ва list comprehension нависед.
+lambda expression in kodro dar yak liniya navistan meboshad
+masalan 
+a=4
+b=3
+print(a) if a>b else b
+output->4
+list comprehension in kodi cikl baroi elementhoi dokhili listro dar  dokhili list meboshad
+masalan
+a=int(input())
+mlist=[i for i in range(a)]
+print(mlist) 
+
+m=3
+output -> [0,1,2]
+
+
+
+
+
+
+
+
+
+### 5 Question
+Кадом методҳои модули datetime ва randome - ро медонед. Бо мисолҳо фаҳмонед.
+datetime.strptime  datetime ro ba srting megardonad
+
+datetime.strftime stringro ro ba datetime megardonad
+
+random.randrang(a,b,c) az a to b bo qadami c yak adad intikhob mekunad
+random.randint(a,b) az a to b adadhoi int yak adad intikhob mekunad
+random.Sample(lst,k=n) az listi lst n_to element intikhob mekunad
+random.choice(str) az str yak element intikhob mekunad 
+
+
+
+
+
+
+
+
+
+
+
+
+### 1 Task
+Write a Python program to insert an element at a specified position into a given list.
+Напишите программу Python для вставки элемента в указанную позицию в заданный список.
+[1, 1, 2, 3, 4, 4, 5, 1]
+# input
+    Enter an element: Sorbon
+    Index: 3
+# output
+    [1, 1, 2, "Sorbon", 3, 4, 4, 5, 1]
+
+list1=[1, 1, 2, 3, 4, 4, 5, 1]
+a=input("Enter an element: ")
+b=int(input("Index: "))
+list1.insert(b,a)
+print(list1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 2 Task
+Write a Python program to convert a list of multiple integers into a single integer.
+Напишите программу на Python для преобразования списка из нескольких целых чисел в одно целое число.
+# input
+    Sample list: [11, 33, 50]
+# output
+    Expected Output: 113350
+
+
+list1=input().split()
+mstr="".join(list1)
+print(mstr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 3 Task
+Create a python program to read line number N from the following file.
+Создайте программу Python для чтения строки номер N из следующего файла.
+my_file.txt -> Hello world
+               TEST
+               Tajikistan
+               An apple
+# input
+    3
+# otput
+    Tajikistan
+
+
+def reaad(numb):
+    with open("files.txt","r") as file:
+        for i in range(numb):
+             
+            line=file.readline()
+        return(line)
+num=int(input())
+print(reaad(num))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 4 Task
+Create a python program to generate a random password of the specified length.
+Создайте программу Python для создания случайного пароля указанной длины.
+# input
+    Enter the desired password length: 12
+# output
+    Generated password: Xy#7pLm$9oR5
+
+
+
+import random
+n=int(input())
+mstr=''
+a="QWERTYUIOPLKJHGFDSAZXCVBNMmnbvcxzasdfghjklpoiuytrewq!$%?:"
+for i in range(n):
+    b=random.choice(a)
+    mstr+=b
+print(mstr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 5 Task
+Build a program that converts currency from one denomination to another.
+Создайте программу, которая конвертирует валюту одного номинала в другой.
+# input
+    Enter the amount in TJS: 1
+# output
+    Rub -> 0.1193
+    USD -> 10.8656
+    EUR -> 11.7837
+    UZ_SUM -> 0.0856
+
+tjs=float(input("Enter the amount in TJS: "))
+print(f"Rub -> {tjs*0.1193}")
+print(f"USD -> {tjs*10.8656}")
+print(f"EUR -> {tjs*11.7837}")
+print(f"UZ_SUM -> {tjs*0.0856}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+### 6 Task
+Given a natural number N, find the sum of the numbers 1+1/1!+1/2!+1/3!+...+1/N!. The number of actions should be proportional to N.
+По данному натуральному числу N найдите сумму чисел 1+1/1!+1/2!+1/3!+...+1/N!. Количество действий должно быть пропорционально N.
+# input
+    1
+# output
+    2
+
+n=int(input())
+def factorial(a):
+    res=1
+    for i in range(1,a+1):
+        res*=i
+    return res
+sum=1
+for i in range(1,n+1):
+    sum+=1/factorial(i)
+print(sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 7 Task
+Write a Python program for binary search of an ordered list.
+Напишите программу на Python для двоичного поиска в упорядоченном списке.
+# Example
+    Ordered_binary_Search([0, 1, 3, 8, 14, 18, 19, 34, 52], 3) -> True
+    Ordered_binary_Search([0, 1, 3, 8, 14, 18, 19, 34, 52], 17) -> False
+
+def binar(lst,a):
+    for i in lst:
+        if i==a:
+            return True
+    else:
+        return False
+
+lst=input().split()
+n=input() 
+print(binar(lst,n))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 8 Task
+Write a Python program to replace each character of a word of length five and more with a hash character (#).
+Напишите программу на Python, заменяющую каждый символ слова длиной пять и более символом решетки (#).
+# input
+    Count the lowercase letters in the said list of words:
+# output
+    ##### the ######### ####### in the said list of ######
+
+mstr=input()
+mlist=mstr.split()
+list1=[]
+str1=''
+for i in mlist:
+    if len(i)<5:
+        list1.append(i)
+    else:
+        for j in range(len(i)):
+            str1+="#"
+        list1.append(str1)
+        str1=""
+str1=" ".join(list1)
+print(str1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 9 Task
+Write a Python script to print a dictionary where the keys are numbers between 1 and N (both included) and the values are the square of the keys.
+Напишите сценарий Python для печати словаря, в котором ключами являются числа от 1 до N (оба включены), а значениями являются квадраты ключей.
+# input
+    15
+# output
+    {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144, 13: 169, 14: 196, 15: 225}
+
+n=int(input())
+mdict={}
+for i in range(1,n+1):
+    mdict[i]=i*i
+print(mdict)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 10 Task
+Given a list of elements of any data types. Create a Python program to separate elements by their types and save them into a new dictionary.
+The keys of a dictionary must be of a data type, and its element must be data belonging to that type.
+Дан список элементов любых типов данных. Создайте программу Python для разделения элементов по их типам и сохранения их в новый словарь.
+Ключи словаря должны иметь тип данных, а его элементом должны быть данные, принадлежащие этому типу.
+# input
+    1 hello True 12 Muhammad
+# output
+    {"int": [1,12], "str": ["hello", "Muhammad"], "bool": [True]}
+
+sen=input()
+list1=sen.split()
+num=[]
+boool=[]
+strr=[]
+for i in list1:
+    try:
+        if i=="True" or i=="False":
+            boool.append(i)
+        elif float(i):
+            num.append(i)
+         
+    except:
+        strr.append(i)
+m_dict={}  
+m_dict["int"]=num
+m_dict["str"] =strr
+m_dict["bool"]=boool    
+print(m_dict)
+
